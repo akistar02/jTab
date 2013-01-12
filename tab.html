@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="Keywords" content="タブ切り替え,jqueryプラグイン,タブ,jquery タブ切り替え,アニメーション" lang="ja">
+<meta name="description" content="jQueryプラグイン[jTab]のデモサイト兼配布ページです。簡単にタブ切り替えを導入することができます。">
+
+<link rel="stylesheet" href="style/reset.css" />
+<link rel="stylesheet" href="style/common.css" />
+<title>jTabデモページ?</title>
+</head>
+<body>
+<div id="content">
+	<div id="header">
+		<h1>jTabデモページ</h1>
+		<p>jQueryプラグイン「jTab」のデモページです。</p>
+		<p>タブ切り替えをするプラグイン(jTab)の配布、使い方を説明しています。</p>
+	</div>
+	
+	<div id="maincontent">
+			
+		<div class="box clearfix">
+			<ul class="tabs clearfix">
+				<li>使い方</li>
+				<li>オプション</li>
+				<li>画像もOK!</li>
+				<li>使うにあたり</li>
+			</ul>
+			
+			<div>
+			<p>以下のソースをjavascriptファイルにコピーします。</p>
+			<p>htmlを見ていただければわかると思いますが、タブ部分のulタグと、タブのコンテンツ部分をdivで囲っています。<br />そのdivにクラスを振り（サンプルの場合は[class="box"]）、「$(".box")」に指定します。</p>
+			<p>[JavaScript]</p>
+				<pre>
+	$(".box").jTab({
+		animate:true,
+		duration: 400
+	});
+				</pre>
+			<p>[HTML]</p>
+			<pre class="brush: html;">
+    &lt;div class=&quot;box&quot;&gt;
+        &lt;ul class="tabs"&gt;
+            &lt;li&gt;タブ部分&lt;/li&gt;
+        &lt;/ul&gt;
+        
+        &lt;div&gt;コンテンツ部分&lt;/div&gt;
+    &lt;/div&gt;
+			</pre>
+			
+			</div>
+			<div>
+			<p>現在のところ、あまり拡張性が高くはないのですが、アニメーションをしながら切り替わるか否かと、アニメーション時の切り替わるスピードを設定できます。</p>
+				<pre>
+	$(".box").jTab({
+		animate:true, //trueならアニメーションします。falseならしません。
+		duration: 400 //アニメーションのスピードです。falseの時に指定しても無視されます。
+	});
+				</pre>
+			
+			</div>
+			<div>
+				<img src="http://upload.wikimedia.org/wikipedia/ja/1/16/%E6%97%A5%E6%9C%AC%E7%8C%AB_2008-4.jpg" width="250" alt="" class="floatImg" />
+				<p>このように自由にレイアウトをしたり、画像を置いても問題ありません。</p>
+				<p>あなたの持っているWebサイトに簡単に設置もできます！<br />ぜひこのプラグインを導入してサイトをおしゃれに飾っちゃって下さい!</p>
+			</div>
+			
+			<div>
+				<p>このプラグインは商用・個人を問わず無料でご利用できます。</p>
+				<p>ただし、いかなる不具合・バグの責任も負わないものとします。<br />それをご理解の上ご利用ください。</p>
+				<p>[一応サポートブラウザ]</p>
+				<ul>
+					<li>IE6,7,8,9</li>
+					<li>safari最新バージョン</li>
+					<li>Firefox最新バージョン</li>
+					<dl>
+						<dt>ダウンロードはこちらからできます。</dt>
+						<dd><a href="script/tab.js">jTab</a></dd>
+					</dl>
+			</div>
+		</div>
+		
+		<div id="box2" class="box clearfix">
+		
+			<ul class="tabs clearfix">
+				<li>タブ1</li>
+				<li>タブ2</li>
+				<li>タブ3</li>
+				<li>タブ4</li>
+			</ul>
+			
+			<div>
+				<p>コンテンツ1</p>
+				<p>複数のタブを設置可能です。</p>
+				<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+			</div>
+			<div>
+				<p>コンテンツ2</p>
+				<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+			</div>
+			<div>
+				<p>コンテンツ3</p>	
+				<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+			</div>
+			<div>
+				<p>コンテンツ4</p>
+				<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+			</div>
+		</div>
+		
+		<div class="box2 clearfix">
+		
+			<ul class="tabs clearfix">
+				<li>タブ1</li>
+				<li>タブ2</li>
+				<li>タブ3</li>
+				<li>タブ4</li>
+			</ul>
+			
+			<div>
+				<p>コンテンツ1</p>
+				<p>アニメーションなしバージョン</p>
+				<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+			</div>
+			<div>
+				<p>コンテンツ2</p>
+				<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+			</div>
+			<div>
+				<p>コンテンツ3</p>	
+				<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+			</div>
+			<div>
+				<p>コンテンツ4</p>
+				<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="script/tab.js"></script>
+<script type="text/javascript" src="script/common.js"></script>
+</body>
+</html>
